@@ -13,7 +13,12 @@ Diy STL containers I made as a learning project to get a deeper understanding of
  - the basics of performance oriented thinking
 
 ## Implemented Containers
-Vector, Stack (LinkedList and Array), Queue, PriorityQueue, HashSet, HashMap
+ - Vector
+ - Stack (LinkedList and Array) 
+ - Queue 
+ - PriorityQueue 
+ - HashSet 
+ - HashMap
 
 # State of the project 
 All containers work and there are no obvious bugs. I tested all containers with self written tests and fixed all bugs I found. 
