@@ -60,24 +60,23 @@ class Stack {
     }
 };
 
-/* 
- * first ever container I made, thought I just leave it here
- *
-class Stack {
+
+template<typename T> 
+class StackList {
+	
   private: 
     struct ListNode {
-      ListNode *prev; 
-
       T val; 
+      ListNode *prev; 
 
       ListNode(T v) : val(v), prev(nullptr) {} 
     };
 
-    int elements = 0; 
+    size_t elements = 0; 
     ListNode *curr = nullptr;
   
   public: 
-    ~Stack() {
+    ~StackList() {
       while(curr != nullptr) {
         ListNode *prev = curr->prev; 
  
@@ -87,7 +86,7 @@ class Stack {
       }
     }
 
-    void push(int val) {
+    void push(T val) {
       elements++;
 
       ListNode *tmp = curr; //saves curr
@@ -122,8 +121,20 @@ class Stack {
       return curr->val; 
     }
 
-    int size() {
+    size_t size() const {
       return elements; 
     }
+
+  	void clear() {
+      while(curr != nullptr) {
+        ListNode *prev = curr->prev; 
+ 
+        delete curr; 
+
+        curr = prev; 
+      }
+
+	  	elements = 0;
+	  }
 };
-*/
+
